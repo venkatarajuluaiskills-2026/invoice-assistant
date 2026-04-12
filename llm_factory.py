@@ -97,9 +97,20 @@ def get_embeddings():
         logger.info(f"Embeddings initialised: {OLLAMA_EMBED_MODEL} (local Ollama)")
         return embeddings
     except Exception:
-        # Cloud Fallback: Use HuggingFace (runs on CPU, no API key needed)
-        logger.info("Ollama unreachable. Initialising HuggingFace Embeddings (Cloud Mode)...")
-        from langchain_huggingface import HuggingFaceEmbeddings
-        # all-MiniLM-L6-v2 is small, fast, and high quality
-        embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-        return embeddings
+        # Cloud Fallback: Use ChromaDB's built-in lightweight ONNX embedding
+        # This is ~50MB vs 2GB for PyTorch/sentence-transformers
+        logger.info("Ollama unreachable. Using lightweight ChromaDB ONNX embedding (Cloud Mode)...")
+        try:
+            from chromadb.utils.embedding_functions import DefaultEmbeddingFunction
+            class ChromaEmbeddingWrapper:
+                """Wrap ChromaDB's embedding function to match LangChain interface."""
+                def __init__(self):
+                    self._fn = DefaultEmbeddingFunction()
+                def embed_documents(self, texts):
+                    return self._fn(texts)
+                def embed_query(self, text):
+                    return self._fn([text])[0]
+            return ChromaEmbeddingWrapper()
+        except Exception as e2:
+            logger.error(f"All embedding fallbacks failed: {e2}")
+            return None
