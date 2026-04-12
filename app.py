@@ -1,3 +1,8 @@
+# ── DIAGNOSTIC HEARTBEAT ───────────────────────────────────────────────────
+print("\n" + "="*50)
+print("🚀 TCS INVOICE ASSISTANT STARTING...")
+print("="*50 + "\n")
+
 # ── CHROMADB SQLITE FIX (FOR CLOUD DEPLOYMENT) ────────────────────────────────
 try:
     __import__('pysqlite3')
