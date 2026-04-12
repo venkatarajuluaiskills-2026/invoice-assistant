@@ -50,11 +50,24 @@ PRICE_TOLERANCE_PCT      = 0.03
 AMOUNT_ROUNDING_INR      = 1.00
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-EXPORT_DIR      = "./exports"
-LOG_DIR         = "./logs"
-INVOICE_DIR     = "./synthetic/invoices"
+# On Streamlit Cloud, /mount/src/... is READ-ONLY.
+# Writable directories must use /tmp instead.
+import sys
+_IS_CLOUD = "/mount/src" in str(Path(__file__).resolve())
+_BASE_WRITE = Path("/tmp/invoice_assistant") if _IS_CLOUD else Path(".")
+
+EXPORT_DIR      = str(_BASE_WRITE / "exports")
+LOG_DIR         = str(_BASE_WRITE / "logs")
+INVOICE_DIR     = str(_BASE_WRITE / "synthetic" / "invoices")
+CHROMA_DB_PATH  = str(_BASE_WRITE / "chroma_db")
+
+# PO/GRN data is read-only — lives in the repo
 PO_MASTER_PATH  = "./synthetic/po_master.json"
 GRN_MASTER_PATH = "./synthetic/grn_master.json"
 
+# Create writable directories safely
 for d in [EXPORT_DIR, LOG_DIR, INVOICE_DIR, CHROMA_DB_PATH]:
-    Path(d).mkdir(parents=True, exist_ok=True)
+    try:
+        Path(d).mkdir(parents=True, exist_ok=True)
+    except Exception:
+        pass  # Silently skip if filesystem is read-only
