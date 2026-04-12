@@ -1,17 +1,6 @@
-"""
-LLM Factory — returns the correct LangChain LLM based on config.
-Supports Azure (primary), Groq free cloud (fast fallback), and Ollama local.
-All chains call get_llm() — never instantiate LLM directly elsewhere.
-"""
-import streamlit as st
-import logging
-from config import (
-    USE_AZURE, LLM_TEMPERATURE, LLM_TIMEOUT, LLM_MAX_RETRIES,
-    AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_VERSION,
-    LLM_MODEL, REASONING_MODEL,
-    OLLAMA_BASE_URL, OLLAMA_LLM_MODEL, OLLAMA_EMBED_MODEL,
-)
 import os
+import logging
+import streamlit as st
 
 logger = logging.getLogger(__name__)
 
@@ -22,6 +11,13 @@ def get_llm(reasoning: bool = False):
     Get primary LLM as LangChain singleton.
     Priority: Azure → Groq (free cloud, fast) → Ollama (local, slow).
     """
+    from config import (
+        USE_AZURE, LLM_TEMPERATURE, LLM_TIMEOUT, LLM_MAX_RETRIES,
+        AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_VERSION,
+        LLM_MODEL, REASONING_MODEL,
+        OLLAMA_BASE_URL, OLLAMA_LLM_MODEL, OLLAMA_EMBED_MODEL,
+    )
+
     # 1. Try to get keys from st.secrets (Cloud) then os.environ (Local)
     groq_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY", "")
     azure_key = st.secrets.get("AZURE_OPENAI_API_KEY") or AZURE_OPENAI_API_KEY
@@ -85,6 +81,8 @@ def get_embeddings():
     Get embedding model as LangChain singleton.
     Priority: Ollama gte-large (local) → HuggingFace MiniLM (cloud/CPU).
     """
+    from config import OLLAMA_BASE_URL, OLLAMA_EMBED_MODEL
+
     # Try Ollama first (local development)
     try:
         from langchain_ollama import OllamaEmbeddings

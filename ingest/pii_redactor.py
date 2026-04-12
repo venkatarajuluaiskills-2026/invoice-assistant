@@ -8,12 +8,8 @@ Presidio is optional — if not installed the module degrades gracefully:
 redact() returns the original text unchanged with an empty redaction_map.
 Install with: pip install presidio-analyzer presidio-anonymizer
 """
-try:
-    from presidio_analyzer import AnalyzerEngine
-    from presidio_anonymizer import AnonymizerEngine
-    _PRESIDIO_AVAILABLE = True
-except ImportError:
-    _PRESIDIO_AVAILABLE = False
+_analyzer   = None
+_anonymizer = None
 
 from typing import Tuple
 import json
@@ -24,46 +20,27 @@ from config import LOG_DIR
 
 logger = logging.getLogger(__name__)
 
-if not _PRESIDIO_AVAILABLE:
-    logger.warning(
-        "presidio-analyzer not installed. PII redaction is DISABLED. "
-        "Install with: pip install presidio-analyzer presidio-anonymizer"
-    )
-
-# ── Singleton Presidio engines — initialise once ──────────────────────────────
-_analyzer   = None
-_anonymizer = None
-
-ENTITIES_TO_REDACT = [
-    "PERSON", "PHONE_NUMBER", "EMAIL_ADDRESS",
-    "IBAN_CODE", "CREDIT_CARD",
-    "IN_PAN", "IN_AADHAAR",
-    "LOCATION", "IP_ADDRESS", "URL",
-]
-
-
 def _get_engines():
     """Initialise Presidio AnalyzerEngine and AnonymizerEngine as singletons."""
     global _analyzer, _anonymizer
-    if not _PRESIDIO_AVAILABLE:
-        return None, None
+    
     if _analyzer is None:
         try:
-            # Explicitly configure to use the installed spacy model
-            from presidio_analyzer.nlp_engine import SpacyNlpEngine
+            # Lazy imports
             from presidio_analyzer import AnalyzerEngine
+            from presidio_anonymizer import AnonymizerEngine
+            from presidio_analyzer.nlp_engine import SpacyNlpEngine
             
             # This ensures Presidio doesn't try to download a model at runtime
-            nlp_configuration = {
-                "nlp_engine_name": "spacy",
-                "models": [{"lang_code": "en", "model_name": "en_core_web_sm"}],
-            }
-            
-            _analyzer = AnalyzerEngine(default_score_threshold=0.4, nlp_engine_name="spacy", models=[{"lang_code": "en", "model_name": "en_core_web_sm"}])
+            _analyzer = AnalyzerEngine(
+                default_score_threshold=0.4, 
+                nlp_engine_name="spacy", 
+                models=[{"lang_code": "en", "model_name": "en_core_web_sm"}]
+            )
             _anonymizer = AnonymizerEngine()
             logger.info("Presidio PII engines initialised successfully with en_core_web_sm.")
         except Exception as e:
-            logger.error(f"Failed to initialise Presidio engines: {e}. Degrading gracefully.")
+            logger.warning(f"Presidio not fully available (could be model missing): {e}. PII redaction disabled.")
             return None, None
             
     return _analyzer, _anonymizer
@@ -76,18 +53,7 @@ def redact(text: str) -> Tuple[str, dict]:
     Builds a redaction_map so authorised reviewers can restore originals.
 
     If Presidio is not installed, returns (text, {}) unchanged.
-
-    Args:
-        text: Raw invoice text (may contain PII)
-
-    Returns:
-        Tuple of (redacted_text, redaction_map)
-        redacted_text — safe to send to LLM
-        redaction_map — {placeholder: original_value} for authorised restore
     """
-    if not _PRESIDIO_AVAILABLE:
-        return text, {}
-
     analyzer, _ = _get_engines()
     if analyzer is None:
         return text, {}

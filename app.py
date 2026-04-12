@@ -193,15 +193,20 @@ with st.sidebar:
         )
         st.divider()
 
-    process_btn = st.button(
-        "⚡ Process All Invoices",
-        type="primary",
-        use_container_width=True,
-        disabled=not uploaded_files,
-    )
-
 # ── Processing pipeline ───────────────────────────────────────────────────────
 if process_btn and uploaded_files:
+    # 🧠 Lazy Load Heavy Engines only when needed
+    with st.status("🧠 Initialising AI Engines...", expanded=False) as status:
+        from ingest.loaders import load_invoice
+        from ingest.pii_redactor import redact, log_pii_event
+        from rag.document_processor import split_documents
+        from rag.vector_store import check_duplicate, upsert_invoice_chunks
+        from chains.extraction_chain import run_extraction
+        from chains.validation_chain import run_validation
+        from chains.explanation_chain import get_explainer_chain
+        from chains.chat_chain import get_chat_response
+        status.update(label="✅ AI Engines Ready", state="complete")
+
     # Clear previous results
     st.session_state.results        = []
     st.session_state.redaction_maps = {}
