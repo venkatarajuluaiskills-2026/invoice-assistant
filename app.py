@@ -24,7 +24,7 @@ import json
 from pathlib import Path
 
 st.set_page_config(
-    page_title="Invoice Processing Assistant",
+    page_title="AI Invoice Assistant",
     page_icon="🧾",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -151,7 +151,7 @@ defaults = {
     "batch_summary":  "",
     "filenames":      [],
     "chat_history":   [
-        ("ai", "👋 **Hi there! I am your AI Finance Assistant.** \n\nI can instantly extract data from your PDFs, perform 3-way matching against Purchase Orders, and answer any questions about your documents in natural language.\n\n👈 **Please upload your invoices in the sidebar to begin!**")
+        ("ai", "👋 **Hi! I am your AI Finance Assistant.** \n\nI can instantly extract data from your PDFs, perform 3-way matching against your master PO records, and answer any complex audit questions in natural language.\n\n👈 **Please upload your invoices in the sidebar to begin!**")
     ],
 }
 for key, val in defaults.items():
@@ -161,9 +161,8 @@ for key, val in defaults.items():
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("""
-    <div style="text-align:center; padding: 1rem 0;">
-        <div style="font-size:2.5rem;">🧾</div>
-        <div style="font-size:1.1rem; font-weight:700; color:#1a237e;">Invoice Assistant</div>
+    <div style="text-align:center; padding: 1.5rem 0;">
+        <div style="font-size:3rem; font-weight:900; color:#1a237e; letter-spacing:-1px;">Invoice <span style="color:#0080ff;">AI</span></div>
     </div>
     """, unsafe_allow_html=True)
 
