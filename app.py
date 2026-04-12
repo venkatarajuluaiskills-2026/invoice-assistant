@@ -99,23 +99,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ── Imports ───────────────────────────────────────────────────────────────────
-from config import (
-    PO_MASTER_PATH, GRN_MASTER_PATH,
-    USE_AZURE, LLM_MODEL, OLLAMA_LLM_MODEL,
-)
-from ingest.loaders import load_invoice
-from ingest.pii_redactor import redact, log_pii_event
-from rag.splitters import split_documents
-from rag.vector_store import upsert_invoice_chunks, check_duplicate
-from chains.extraction_chain import run_extraction
-from chains.validation_chain import run_validation
-from chains.explanation_chain import explain_flag
-from chains.summary_chain import run_batch_summary
-from guardrails.output_parser import InvoiceExtraction
-from callbacks.audit_callback import log_audit_event
-from chains.chat_chain import run_chat
-from chains.smart_demo_chat import smart_demo_answer
+# ── Minimal top-level imports only (no heavy AI libraries) ───────────────────
+from config import PO_MASTER_PATH, GRN_MASTER_PATH, USE_AZURE, LLM_MODEL, OLLAMA_LLM_MODEL
 
 
 @st.cache_data
@@ -206,6 +191,18 @@ if process_btn and uploaded_files:
         from chains.explanation_chain import get_explainer_chain
         from chains.chat_chain import get_chat_response
         status.update(label="✅ AI Engines Ready", state="complete")
+
+    # 🧠 Lazy import ALL heavy modules here — never at top of file
+    from ingest.loaders import load_invoice
+    from ingest.pii_redactor import redact, log_pii_event
+    from rag.splitters import split_documents
+    from rag.vector_store import upsert_invoice_chunks, check_duplicate
+    from chains.extraction_chain import run_extraction
+    from chains.validation_chain import run_validation
+    from chains.explanation_chain import explain_flag
+    from chains.summary_chain import run_batch_summary
+    from guardrails.output_parser import InvoiceExtraction
+    from callbacks.audit_callback import log_audit_event
 
     # Clear previous results
     st.session_state.results        = []
