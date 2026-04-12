@@ -1,0 +1,690 @@
+[
+  {
+    "po_number": "PO-2026-0001",
+    "po_date": "2026-01-05",
+    "vendor_name": "Infosys BPM Limited",
+    "vendor_gstin": "29AABCI1682H1ZK",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "IT Infrastructure Management Services",
+        "hsn_code": "998314",
+        "quantity": 10,
+        "unit_price": 45000.00,
+        "gst_rate": 18,
+        "amount": 450000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Cloud Migration Consulting",
+        "hsn_code": "998313",
+        "quantity": 5,
+        "unit_price": 30000.00,
+        "gst_rate": 18,
+        "amount": 150000.00
+      }
+    ],
+    "subtotal": 600000.00,
+    "tax_amount": 108000.00,
+    "total_amount": 708000.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0002",
+    "po_date": "2026-01-08",
+    "vendor_name": "Wipro Ltd",
+    "vendor_gstin": "29AAACW0254K1Z3",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Application Development Services",
+        "hsn_code": "998311",
+        "quantity": 8,
+        "unit_price": 55000.00,
+        "gst_rate": 18,
+        "amount": 440000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Software Testing & QA",
+        "hsn_code": "998312",
+        "quantity": 6,
+        "unit_price": 25000.00,
+        "gst_rate": 18,
+        "amount": 150000.00
+      }
+    ],
+    "subtotal": 590000.00,
+    "tax_amount": 106200.00,
+    "total_amount": 696200.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0003",
+    "po_date": "2026-01-10",
+    "vendor_name": "HCL Technologies",
+    "vendor_gstin": "09AAACH3564A1Z4",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Network Security Services",
+        "hsn_code": "998315",
+        "quantity": 12,
+        "unit_price": 40000.00,
+        "gst_rate": 18,
+        "amount": 480000.00
+      }
+    ],
+    "subtotal": 480000.00,
+    "tax_amount": 86400.00,
+    "total_amount": 566400.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0004",
+    "po_date": "2026-01-12",
+    "vendor_name": "Tech Mahindra",
+    "vendor_gstin": "27AABCT5076P1ZA",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Telecom BSS/OSS Development",
+        "hsn_code": "998311",
+        "quantity": 15,
+        "unit_price": 28000.00,
+        "gst_rate": 18,
+        "amount": 420000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Network Optimization Consulting",
+        "hsn_code": "998313",
+        "quantity": 10,
+        "unit_price": 22000.00,
+        "gst_rate": 18,
+        "amount": 220000.00
+      }
+    ],
+    "subtotal": 640000.00,
+    "tax_amount": 115200.00,
+    "total_amount": 755200.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0005",
+    "po_date": "2026-01-15",
+    "vendor_name": "Mphasis Ltd",
+    "vendor_gstin": "29AAACM4182M1ZC",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Banking Technology Solutions",
+        "hsn_code": "998311",
+        "quantity": 20,
+        "unit_price": 18000.00,
+        "gst_rate": 18,
+        "amount": 360000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Digital Banking Consulting",
+        "hsn_code": "998313",
+        "quantity": 8,
+        "unit_price": 32000.00,
+        "gst_rate": 18,
+        "amount": 256000.00
+      }
+    ],
+    "subtotal": 616000.00,
+    "tax_amount": 110880.00,
+    "total_amount": 726880.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0006",
+    "po_date": "2026-01-18",
+    "vendor_name": "Hexaware Technologies",
+    "vendor_gstin": "27AAACH8421B1ZP",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "RPA Implementation Services",
+        "hsn_code": "998314",
+        "quantity": 14,
+        "unit_price": 35000.00,
+        "gst_rate": 18,
+        "amount": 490000.00
+      }
+    ],
+    "subtotal": 490000.00,
+    "tax_amount": 88200.00,
+    "total_amount": 578200.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0007",
+    "po_date": "2026-01-20",
+    "vendor_name": "Mindtree Ltd",
+    "vendor_gstin": "29AABCM6717K1ZS",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Agile Product Engineering",
+        "hsn_code": "998311",
+        "quantity": 10,
+        "unit_price": 42000.00,
+        "gst_rate": 18,
+        "amount": 420000.00
+      },
+      {
+        "line_no": 2,
+        "description": "DevOps Automation",
+        "hsn_code": "998314",
+        "quantity": 5,
+        "unit_price": 38000.00,
+        "gst_rate": 18,
+        "amount": 190000.00
+      }
+    ],
+    "subtotal": 610000.00,
+    "tax_amount": 109800.00,
+    "total_amount": 719800.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0008",
+    "po_date": "2026-01-22",
+    "vendor_name": "NIIT Technologies",
+    "vendor_gstin": "07AAACN1784H1Z3",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Travel Technology Platform Services",
+        "hsn_code": "998311",
+        "quantity": 8,
+        "unit_price": 48000.00,
+        "gst_rate": 18,
+        "amount": 384000.00
+      }
+    ],
+    "subtotal": 384000.00,
+    "tax_amount": 69120.00,
+    "total_amount": 453120.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0009",
+    "po_date": "2026-01-25",
+    "vendor_name": "Cyient Ltd",
+    "vendor_gstin": "36AAACL2817E1ZU",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Engineering Design Services",
+        "hsn_code": "998313",
+        "quantity": 6,
+        "unit_price": 52000.00,
+        "gst_rate": 18,
+        "amount": 312000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Geospatial Analytics",
+        "hsn_code": "998314",
+        "quantity": 4,
+        "unit_price": 45000.00,
+        "gst_rate": 18,
+        "amount": 180000.00
+      }
+    ],
+    "subtotal": 492000.00,
+    "tax_amount": 88560.00,
+    "total_amount": 580560.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0010",
+    "po_date": "2026-01-28",
+    "vendor_name": "Zensar Technologies",
+    "vendor_gstin": "27AAACL7612N1ZM",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "SAP Implementation Services",
+        "hsn_code": "998311",
+        "quantity": 18,
+        "unit_price": 35000.00,
+        "gst_rate": 18,
+        "amount": 630000.00
+      }
+    ],
+    "subtotal": 630000.00,
+    "tax_amount": 113400.00,
+    "total_amount": 743400.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0011",
+    "po_date": "2026-02-01",
+    "vendor_name": "Persistent Systems",
+    "vendor_gstin": "27AAACP4750G1ZT",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Product Lifecycle Management",
+        "hsn_code": "998311",
+        "quantity": 12,
+        "unit_price": 41000.00,
+        "gst_rate": 18,
+        "amount": 492000.00
+      }
+    ],
+    "subtotal": 492000.00,
+    "tax_amount": 88560.00,
+    "total_amount": 580560.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0012",
+    "po_date": "2026-02-04",
+    "vendor_name": "Sonata Software",
+    "vendor_gstin": "29AAACS4752D1ZH",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Microsoft Dynamics Implementation",
+        "hsn_code": "998311",
+        "quantity": 9,
+        "unit_price": 44000.00,
+        "gst_rate": 18,
+        "amount": 396000.00
+      }
+    ],
+    "subtotal": 396000.00,
+    "tax_amount": 71280.00,
+    "total_amount": 467280.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0013",
+    "po_date": "2026-02-07",
+    "vendor_name": "Mastek Ltd",
+    "vendor_gstin": "27AAACM3514B1ZW",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Oracle ERP Consulting",
+        "hsn_code": "998313",
+        "quantity": 7,
+        "unit_price": 50000.00,
+        "gst_rate": 18,
+        "amount": 350000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Change Management Services",
+        "hsn_code": "998313",
+        "quantity": 5,
+        "unit_price": 35000.00,
+        "gst_rate": 18,
+        "amount": 175000.00
+      }
+    ],
+    "subtotal": 525000.00,
+    "tax_amount": 94500.00,
+    "total_amount": 619500.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0014",
+    "po_date": "2026-02-10",
+    "vendor_name": "Kpit Technologies",
+    "vendor_gstin": "27AAACK2314H1ZP",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Automotive Software Engineering",
+        "hsn_code": "998311",
+        "quantity": 11,
+        "unit_price": 46000.00,
+        "gst_rate": 18,
+        "amount": 506000.00
+      }
+    ],
+    "subtotal": 506000.00,
+    "tax_amount": 91080.00,
+    "total_amount": 597080.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0015",
+    "po_date": "2026-02-13",
+    "vendor_name": "Sasken Technologies",
+    "vendor_gstin": "29AAACS3817H1ZG",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Semiconductor Design Services",
+        "hsn_code": "998314",
+        "quantity": 6,
+        "unit_price": 58000.00,
+        "gst_rate": 18,
+        "amount": 348000.00
+      }
+    ],
+    "subtotal": 348000.00,
+    "tax_amount": 62640.00,
+    "total_amount": 410640.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0016",
+    "po_date": "2026-02-16",
+    "vendor_name": "L&T Infotech",
+    "vendor_gstin": "27AAACL5148N1Z3",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Energy Sector Digital Transformation",
+        "hsn_code": "998313",
+        "quantity": 16,
+        "unit_price": 38000.00,
+        "gst_rate": 18,
+        "amount": 608000.00
+      }
+    ],
+    "subtotal": 608000.00,
+    "tax_amount": 109440.00,
+    "total_amount": 717440.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0017",
+    "po_date": "2026-02-19",
+    "vendor_name": "Birlasoft Ltd",
+    "vendor_gstin": "09AAACB5217G1ZA",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Manufacturing MES Implementation",
+        "hsn_code": "998311",
+        "quantity": 10,
+        "unit_price": 43000.00,
+        "gst_rate": 18,
+        "amount": 430000.00
+      }
+    ],
+    "subtotal": 430000.00,
+    "tax_amount": 77400.00,
+    "total_amount": 507400.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0018",
+    "po_date": "2025-11-01",
+    "vendor_name": "Mphasis Ltd",
+    "vendor_gstin": "29AAACM4182M1ZC",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Insurance Digital Platform",
+        "hsn_code": "998311",
+        "quantity": 14,
+        "unit_price": 37000.00,
+        "gst_rate": 18,
+        "amount": 518000.00
+      }
+    ],
+    "subtotal": 518000.00,
+    "tax_amount": 93240.00,
+    "total_amount": 611240.00,
+    "status": "fully_invoiced",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0019",
+    "po_date": "2025-11-15",
+    "vendor_name": "Nucleus Software",
+    "vendor_gstin": "07AAACN3821H1ZC",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Lending Software Platform",
+        "hsn_code": "998311",
+        "quantity": 9,
+        "unit_price": 52000.00,
+        "gst_rate": 18,
+        "amount": 468000.00
+      }
+    ],
+    "subtotal": 468000.00,
+    "tax_amount": 84240.00,
+    "total_amount": 552240.00,
+    "status": "fully_invoiced",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0020",
+    "po_date": "2026-03-01",
+    "vendor_name": "Polaris Consulting",
+    "vendor_gstin": "33AAACP3271K1ZB",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Banking Core Transformation",
+        "hsn_code": "998311",
+        "quantity": 13,
+        "unit_price": 41000.00,
+        "gst_rate": 18,
+        "amount": 533000.00
+      }
+    ],
+    "subtotal": 533000.00,
+    "tax_amount": 95940.00,
+    "total_amount": 628940.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0021",
+    "po_date": "2026-03-05",
+    "vendor_name": "Infosys BPM Limited",
+    "vendor_gstin": "29AABCI1682H1ZK",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Finance & Accounting BPO",
+        "hsn_code": "998211",
+        "quantity": 20,
+        "unit_price": 25000.00,
+        "gst_rate": 18,
+        "amount": 500000.00
+      }
+    ],
+    "subtotal": 500000.00,
+    "tax_amount": 90000.00,
+    "total_amount": 590000.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0022",
+    "po_date": "2026-03-08",
+    "vendor_name": "Wipro Ltd",
+    "vendor_gstin": "29AAACW0254K1Z3",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "AI/ML Platform Development",
+        "hsn_code": "998311",
+        "quantity": 7,
+        "unit_price": 65000.00,
+        "gst_rate": 18,
+        "amount": 455000.00
+      }
+    ],
+    "subtotal": 455000.00,
+    "tax_amount": 81900.00,
+    "total_amount": 536900.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0023",
+    "po_date": "2026-03-11",
+    "vendor_name": "HCL Technologies",
+    "vendor_gstin": "09AAACH3564A1Z4",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "IoT Solutions Development",
+        "hsn_code": "998314",
+        "quantity": 11,
+        "unit_price": 47000.00,
+        "gst_rate": 18,
+        "amount": 517000.00
+      }
+    ],
+    "subtotal": 517000.00,
+    "tax_amount": 93060.00,
+    "total_amount": 610060.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0024",
+    "po_date": "2026-03-14",
+    "vendor_name": "Tech Mahindra",
+    "vendor_gstin": "27AABCT5076P1ZA",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "5G Network Software Development",
+        "hsn_code": "998311",
+        "quantity": 15,
+        "unit_price": 44000.00,
+        "gst_rate": 18,
+        "amount": 660000.00
+      }
+    ],
+    "subtotal": 660000.00,
+    "tax_amount": 118800.00,
+    "total_amount": 778800.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  },
+  {
+    "po_number": "PO-2026-0025",
+    "po_date": "2026-03-17",
+    "vendor_name": "Zensar Technologies",
+    "vendor_gstin": "27AAACL7612N1ZM",
+    "buyer_name": "Tata Consultancy Services Ltd",
+    "buyer_gstin": "27AAACT2727Q1ZW",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_no": 1,
+        "description": "Digital Experience Platform",
+        "hsn_code": "998311",
+        "quantity": 9,
+        "unit_price": 53000.00,
+        "gst_rate": 18,
+        "amount": 477000.00
+      }
+    ],
+    "subtotal": 477000.00,
+    "tax_amount": 85860.00,
+    "total_amount": 562860.00,
+    "status": "open",
+    "tolerance_pct": 0.03
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "grn_number": "GRN-2026-0001",
+    "grn_date": "2026-01-20",
+    "po_number": "PO-2026-0001",
+    "vendor_name": "Infosys BPM Limited",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "IT Infrastructure Management Services",
+        "quantity_ordered": 10,
+        "quantity_received": 10,
+        "quantity_accepted": 10,
+        "unit_price": 45000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Cloud Migration Consulting",
+        "quantity_ordered": 5,
+        "quantity_received": 5,
+        "quantity_accepted": 5,
+        "unit_price": 30000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0002",
+    "grn_date": "2026-01-24",
+    "po_number": "PO-2026-0002",
+    "vendor_name": "Wipro Ltd",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Application Development Services",
+        "quantity_ordered": 8,
+        "quantity_received": 8,
+        "quantity_accepted": 8,
+        "unit_price": 55000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Software Testing & QA",
+        "quantity_ordered": 6,
+        "quantity_received": 6,
+        "quantity_accepted": 6,
+        "unit_price": 25000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0003",
+    "grn_date": "2026-01-28",
+    "po_number": "PO-2026-0003",
+    "vendor_name": "HCL Technologies",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Network Security Services",
+        "quantity_ordered": 12,
+        "quantity_received": 0,
+        "quantity_accepted": 0,
+        "unit_price": 40000.00
+      }
+    ],
+    "status": "rejected",
+    "rejection_reason": "Damaged items - boxes were opened and contents were broken."
+  },
+  {
+    "grn_number": "GRN-2026-0004",
+    "grn_date": "2026-02-01",
+    "po_number": "PO-2026-0004",
+    "vendor_name": "Tech Mahindra",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Telecom BSS/OSS Development",
+        "quantity_ordered": 15,
+        "quantity_received": 15,
+        "quantity_accepted": 15,
+        "unit_price": 28000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Network Optimization Consulting",
+        "quantity_ordered": 10,
+        "quantity_received": 10,
+        "quantity_accepted": 10,
+        "unit_price": 22000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0005",
+    "grn_date": "2026-02-04",
+    "po_number": "PO-2026-0005",
+    "vendor_name": "Mphasis Ltd",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Banking Technology Solutions",
+        "quantity_ordered": 20,
+        "quantity_received": 20,
+        "quantity_accepted": 20,
+        "unit_price": 18000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Digital Banking Consulting",
+        "quantity_ordered": 8,
+        "quantity_received": 8,
+        "quantity_accepted": 8,
+        "unit_price": 32000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0006",
+    "grn_date": "2026-02-07",
+    "po_number": "PO-2026-0006",
+    "vendor_name": "Hexaware Technologies",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "RPA Implementation Services",
+        "quantity_ordered": 14,
+        "quantity_received": 14,
+        "quantity_accepted": 14,
+        "unit_price": 35000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0007",
+    "grn_date": "2026-02-10",
+    "po_number": "PO-2026-0007",
+    "vendor_name": "Mindtree Ltd",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Agile Product Engineering",
+        "quantity_ordered": 10,
+        "quantity_received": 10,
+        "quantity_accepted": 10,
+        "unit_price": 42000.00
+      },
+      {
+        "line_no": 2,
+        "description": "DevOps Automation",
+        "quantity_ordered": 5,
+        "quantity_received": 5,
+        "quantity_accepted": 5,
+        "unit_price": 38000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0008",
+    "grn_date": "2026-02-13",
+    "po_number": "PO-2026-0008",
+    "vendor_name": "NIIT Technologies",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Travel Technology Platform Services",
+        "quantity_ordered": 8,
+        "quantity_received": 8,
+        "quantity_accepted": 8,
+        "unit_price": 48000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0009",
+    "grn_date": "2026-02-16",
+    "po_number": "PO-2026-0009",
+    "vendor_name": "Cyient Ltd",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Engineering Design Services",
+        "quantity_ordered": 6,
+        "quantity_received": 6,
+        "quantity_accepted": 6,
+        "unit_price": 52000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Geospatial Analytics",
+        "quantity_ordered": 4,
+        "quantity_received": 4,
+        "quantity_accepted": 4,
+        "unit_price": 45000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0010",
+    "grn_date": "2026-02-19",
+    "po_number": "PO-2026-0010",
+    "vendor_name": "Zensar Technologies",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "SAP Implementation Services",
+        "quantity_ordered": 18,
+        "quantity_received": 18,
+        "quantity_accepted": 18,
+        "unit_price": 35000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0011",
+    "grn_date": "2026-02-22",
+    "po_number": "PO-2026-0011",
+    "vendor_name": "Persistent Systems",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Product Lifecycle Management",
+        "quantity_ordered": 12,
+        "quantity_received": 12,
+        "quantity_accepted": 12,
+        "unit_price": 41000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0012",
+    "grn_date": "2026-02-25",
+    "po_number": "PO-2026-0012",
+    "vendor_name": "Sonata Software",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Microsoft Dynamics Implementation",
+        "quantity_ordered": 9,
+        "quantity_received": 9,
+        "quantity_accepted": 9,
+        "unit_price": 44000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0013",
+    "grn_date": "2026-02-28",
+    "po_number": "PO-2026-0013",
+    "vendor_name": "Mastek Ltd",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Oracle ERP Consulting",
+        "quantity_ordered": 7,
+        "quantity_received": 7,
+        "quantity_accepted": 7,
+        "unit_price": 50000.00
+      },
+      {
+        "line_no": 2,
+        "description": "Change Management Services",
+        "quantity_ordered": 5,
+        "quantity_received": 5,
+        "quantity_accepted": 5,
+        "unit_price": 35000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0014",
+    "grn_date": "2026-03-04",
+    "po_number": "PO-2026-0014",
+    "vendor_name": "Kpit Technologies",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Automotive Software Engineering",
+        "quantity_ordered": 11,
+        "quantity_received": 8,
+        "quantity_accepted": 8,
+        "unit_price": 46000.00
+      }
+    ],
+    "status": "partially_received"
+  },
+  {
+    "grn_number": "GRN-2026-0015",
+    "grn_date": "2026-03-07",
+    "po_number": "PO-2026-0015",
+    "vendor_name": "Sasken Technologies",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Semiconductor Design Services",
+        "quantity_ordered": 6,
+        "quantity_received": 4,
+        "quantity_accepted": 4,
+        "unit_price": 58000.00
+      }
+    ],
+    "status": "partially_received"
+  },
+  {
+    "grn_number": "GRN-2026-0016",
+    "grn_date": "2026-03-10",
+    "po_number": "PO-2026-0003",
+    "vendor_name": "HCL Technologies",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Network Security Services",
+        "quantity_ordered": 12,
+        "quantity_received": 0,
+        "quantity_accepted": 0,
+        "unit_price": 40000.00
+      }
+    ],
+    "status": "rejected",
+    "rejection_reason": "Quality check failed - hardware specifications do not match the PO requirements."
+  },
+  {
+    "grn_number": "GRN-2026-0017",
+    "grn_date": "2026-03-13",
+    "po_number": "PO-2026-0016",
+    "vendor_name": "L&T Infotech",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Energy Sector Digital Transformation",
+        "quantity_ordered": 16,
+        "quantity_received": 16,
+        "quantity_accepted": 16,
+        "unit_price": 38000.00
+      }
+    ],
+    "status": "fully_received"
+  },
+  {
+    "grn_number": "GRN-2026-0018",
+    "grn_date": "2026-03-16",
+    "po_number": "PO-2026-0017",
+    "vendor_name": "Birlasoft Ltd",
+    "received_items": [
+      {
+        "line_no": 1,
+        "description": "Manufacturing MES Implementation",
+        "quantity_ordered": 10,
+        "quantity_received": 10,
+        "quantity_accepted": 10,
+        "unit_price": 43000.00
+      }
+    ],
+    "status": "fully_received"
+  }
+]

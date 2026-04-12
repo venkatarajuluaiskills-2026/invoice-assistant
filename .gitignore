@@ -1,0 +1,34 @@
+# ── ENVIRONMENT SECRETS ────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── PYTHON ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── DATABASE ─────────────────────────────────────────────────────────────────
+chroma_db/
+
+# ── TESSERACT BINARIES (DO NOT UPLOAD) ───────────────────────────────────────
+# Streamlit Cloud installs these via packages.txt
+*.exe
+*.dll
+*.html
+tessdata/
+doc/
+setup.bat
+tesseract-uninstall.exe
+winpath.exe
+
+# ── LOCAL ARTIFACTS ─────────────────────────────────────────────────────────
+exports/
+logs/
+.gemini/
