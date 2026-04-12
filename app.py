@@ -1,24 +1,11 @@
-"""
-Invoice Processing Assistant
-Main Streamlit application.
+# ── CHROMADB SQLITE FIX (FOR CLOUD DEPLOYMENT) ────────────────────────────────
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
 
-LLM: Azure GenAI Lab GPT-4o (primary) | Ollama llama3.2:3b (fallback)
-Embeddings: Ollama gte-large (always local — zero Azure token cost)
-
-Full processing pipeline per invoice:
-  Upload
-    → LangChain Document Loader  (InvoicePDFLoader / InvoiceImageLoader)
-    → Presidio PII Redaction     (fully local — no cloud)
-    → LangChain Text Splitter    (structured / unstructured / mixed)
-    → Ollama gte-large ChromaDB  (local vector embeddings + upsert)
-    → Duplicate Detection        (cosine similarity via ChromaDB)
-    → LCEL Extraction Chain      (RAG + Azure GPT-4o → InvoiceExtraction)
-    → LCEL Validation Chain      (business rules + 3-way PO/GRN matching)
-    → LCEL Explanation Chain     (plain-English flag explanations)
-    → Streamlit Review Table     (human-readable display + PII toggle)
-    → Batch Dashboard            (metrics + charts + export)
-    → Audit Trail                (immutable JSONL log of all actions)
-"""
 import streamlit as st
 import json
 from pathlib import Path
