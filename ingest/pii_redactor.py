@@ -48,8 +48,24 @@ def _get_engines():
     if not _PRESIDIO_AVAILABLE:
         return None, None
     if _analyzer is None:
-        _analyzer   = AnalyzerEngine()
-        _anonymizer = AnonymizerEngine()
+        try:
+            # Explicitly configure to use the installed spacy model
+            from presidio_analyzer.nlp_engine import SpacyNlpEngine
+            from presidio_analyzer import AnalyzerEngine
+            
+            # This ensures Presidio doesn't try to download a model at runtime
+            nlp_configuration = {
+                "nlp_engine_name": "spacy",
+                "models": [{"lang_code": "en", "model_name": "en_core_web_sm"}],
+            }
+            
+            _analyzer = AnalyzerEngine(default_score_threshold=0.4, nlp_engine_name="spacy", models=[{"lang_code": "en", "model_name": "en_core_web_sm"}])
+            _anonymizer = AnonymizerEngine()
+            logger.info("Presidio PII engines initialised successfully with en_core_web_sm.")
+        except Exception as e:
+            logger.error(f"Failed to initialise Presidio engines: {e}. Degrading gracefully.")
+            return None, None
+            
     return _analyzer, _anonymizer
 
 

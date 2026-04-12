@@ -44,7 +44,8 @@ presidio-anonymizer>=2.2.354
 # NLP
 nltk>=3.8.1
 rapidfuzz>=3.6.1
+spacy>=3.7.0
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
 
-# NOTE: Do NOT install spacy — not needed, saves install time
+# NOTE: spacy model is downloaded automatically from the URL above
 # NOTE: Do NOT install sentence-transformers — use Ollama gte-large instead
-# NOTE: en-core-web-lg NOT needed — presidio uses its own models
