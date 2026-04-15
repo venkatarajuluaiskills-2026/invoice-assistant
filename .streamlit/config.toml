@@ -1,5 +1,4 @@
-[server]
-port = 8503
+port = 8501
 
 [theme]
 base="dark"
